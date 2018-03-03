@@ -12,7 +12,8 @@
 
 ActiveRecord::Schema.define(version: 20180303194136) do
 
-  create_table "negative_streaks", force: :cascade do |t|
+  create_table "streaks", force: :cascade do |t|
+    t.boolean "positive"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

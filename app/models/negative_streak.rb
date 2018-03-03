@@ -1,2 +1,0 @@
-class NegativeStreak < ApplicationRecord
-end

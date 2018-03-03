@@ -1,0 +1,5 @@
+<% if @streak.positive %>
+  <%= "YAY! Zdrowik has been programming for #{pluralize(@no_of_days, 'day')}" %>
+<% else %>
+  <%= "Zdrowik hasn't been programming for #{pluralize(@no_of_days, 'day')}" %>
+<% end %>

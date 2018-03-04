@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pg', group: :production # Postgress for production only
 gem 'rails_12factor'
+gem 'figaro'

@@ -22,6 +22,10 @@ class StreaksController < ApplicationController
     end
   end
 
+  def send_mail
+    UserMailer.stats.deliver
+  end
+
   private
 
   def streak_params

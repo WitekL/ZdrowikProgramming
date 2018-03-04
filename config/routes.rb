@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root to: "streaks#index"
 
   resources :streaks, only: [:index, :new, :create]
+
+  get 'mail', to: 'streaks#send_mail'
 end

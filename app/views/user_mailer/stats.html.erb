@@ -1,6 +1,14 @@
 <html>
   <body>
-    <h1>TEST</h1>
-    <p><%= @streak.created_at %></p>
+    <h3>Greetings!</h3>
+    <p>You have received this mail because you're subscribed to our ZdrowikProgramming service - no.1 world app in tracking Zdrowik's progress. Here are some useful stats:</p>
+
+    <h4>Last streak: <%= @previous_streak.nil? ? "" : @previous_streak.duration %> </h4>
+    <h4>Longest negative streak: <%= @longest_negative.nil? ? "" : @longest_negative.duration %> </h4>
+    <h4>Longest positive streak: <%= @longest_positive.nil? ? "" : @longest_positive.duration %> </h4>
+
+    <p>We hope that this intel will shed some light on Zdrowik's progress in the exciting world of programming.</p>
+    <p>xoxoxo</p>
+    <p>ZdrowikProgramming development crew</p>
   </body>
 </html>

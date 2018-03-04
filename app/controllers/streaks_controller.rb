@@ -23,7 +23,11 @@ class StreaksController < ApplicationController
   end
 
   def send_mail
-    UserMailer.stats.deliver
+    recipients = ["dominika.grenda@gmail.com", "witold.leicht@gmail.com", "q.94941@gmail.com", "kubahorosz95@gmail.com"]
+
+    recipients.each do |recipient|
+      UserMailer.stats(recipient).deliver
+    end
   end
 
   private

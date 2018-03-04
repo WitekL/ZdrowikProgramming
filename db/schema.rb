@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303194136) do
+ActiveRecord::Schema.define(version: 20180304211025) do
 
   create_table "streaks", force: :cascade do |t|
     t.boolean "positive"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "duration"
   end
 
 end

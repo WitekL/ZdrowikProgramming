@@ -13,13 +13,13 @@ class StreaksController < ApplicationController
   end
 
   def create
-    @streak = Streak.new(streak_params)
+    old_streak = Streak.last
+    duration = ((Time.now - old_streak.created_at) / (60*60*24)).to_i + 1
+    old_streak.duration = duration
+    old_streak.save
 
-    if @streak.save
-      redirect_to
-    else
-      render 'index'
-    end
+    @streak = Streak.new(streak_params)
+    @streak.save
   end
 
   def send_mail

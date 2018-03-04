@@ -6,8 +6,6 @@ class StreaksController < ApplicationController
     @created_at = @streak.created_at
 
     @no_of_days = ((Time.zone.now - @created_at.to_i).to_i/ 1.day) + 1
-
-    UserMailer.stats.deliver
   end
 
   def new
@@ -22,6 +20,10 @@ class StreaksController < ApplicationController
     else
       render 'index'
     end
+  end
+
+  def send_mail
+    UserMailer.stats.deliver
   end
 
   private
